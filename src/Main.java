@@ -1,25 +1,23 @@
-import hierarchyOfAnimals.Amphibians;
-import hierarchyOfAnimals.Birds;
-import hierarchyOfAnimals.Mammals;
+import hierarchyOfAnimals.*;
 
 public class Main {
     public static void main(String[] args) {
-        Mammals.Herbivores gazelle=new Mammals.Herbivores("Газель", 3, "суша",
+        Herbivores gazelle=new Herbivores("Газель", 3, "суша",
                 40, "трава, растения", "ночью", "скачками",
                 "стадо", "степь");
-        Mammals.Herbivores giraffe=new Mammals.Herbivores("Жираф", 5, "суша",
+        Herbivores giraffe=new Herbivores("Жираф", 5, "суша",
                 15, "трава, растения", "ночью", "бег",
                 "не большое стадо", "саванна");
-        Mammals.Herbivores horse=new Mammals.Herbivores("Лошадь", 6, "суша",
+        Herbivores horse=new Herbivores("Лошадь", 6, "суша",
                 35, "трава, растения", "ночью", "бег",
                 "стадо", "поле");
-        Mammals.Predators hyena=new Mammals.Predators("Гиена", 3, "суша",
+        Predators hyena=new Predators("Гиена", 3, "суша",
                 15, "мясо, падаль", "днём", "бег",
                 "стая", "степь");
-        Mammals.Predators tiger=new Mammals.Predators("Тигр", 7, "суша",
+        Predators tiger=new Predators("Тигр", 7, "суша",
                 50, "мясо", "днём", "бег",
                 "семья", "степь");
-        Mammals.Predators bear=new Mammals.Predators("Медведь", 5, "суша",
+        Predators bear=new Predators("Медведь", 5, "суша",
                 10, "растения, мёд, рыбу", "ночью", "бег",
                 "один", "лес");
         Amphibians frog=new Amphibians("Лягушка", 1, "река, озеро",
@@ -28,22 +26,22 @@ public class Main {
         Amphibians already=new Amphibians("Уж пресноводный", 2, "река, озеро",
                 "лягушки, тритоны",  "ночью", "ползёт и вплавь",
                 "нападающая позиция");
-        Birds.NotFlying peacock=new Birds.NotFlying("Павлин", 3, "суша",
+        NotFlying peacock=new NotFlying("Павлин", 3, "суша",
                 "на насекомых", "пешком", "саванна", "травяные растения",
                 "ночью", "небольшими стаями");
-        Birds.NotFlying penguin=new Birds.NotFlying("Пингвин", 2, "суша и вода",
+        NotFlying penguin=new NotFlying("Пингвин", 2, "суша и вода",
                 "на рыбу", "пешком и вплавь", "северный и южный полюс", "рыба",
                 "ночью", "стаями");
-        Birds.NotFlying dodoBird=new Birds.NotFlying("Птица додо", 3, "суша",
+        NotFlying dodoBird=new NotFlying("Птица додо", 3, "суша",
                 "на насекомых", "пешком", "саванна", "травяные растения",
                 "ночью", "небольшими стаями");
-        Birds.Flying seagull=new Birds.Flying("Чайка", 3, "прибрежные районы",
+        Flying seagull=new Flying("Чайка", 3, "прибрежные районы",
                 "на рыбу", "летает и пешком", "море, берег", "рыба",
                 "ночью", "стаями");
-        Birds.Flying albatross=new Birds.Flying("Альбатрос", 7, "прибрежные районы",
+        Flying albatross=new Flying("Альбатрос", 7, "прибрежные районы",
                 "на рыбу", "летает и пешком", "море, берег", "рыба",
                 "ночью", "один");
-        Birds.Flying falcon=new Birds.Flying("Сокол", 5, "поля, луга",
+        Flying falcon=new Flying("Сокол", 5, "поля, луга",
                 "на грызунов", "летает и пешком", "равнины", "грызуны",
                 "ночью", "один");
 
