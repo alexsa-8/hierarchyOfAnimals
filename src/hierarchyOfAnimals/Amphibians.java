@@ -3,7 +3,7 @@ package hierarchyOfAnimals;
 import java.util.Objects;
 
 public class Amphibians extends Animals{
-    String amphibians = "земноводные";
+    private final String amphibians = "земноводные";
     String livingEnvironment;
     String typeOfFood;
     String sleep;
@@ -20,7 +20,7 @@ public class Amphibians extends Animals{
     }
 
     public void informationAnimal() {
-        System.out.print("Имя: " + name + ", "+amphibians+", возраст: " + age +
+        System.out.print("Имя: " + getName() + ", "+amphibians+", возраст: " + age +
                 " (год), среда проживания: " + livingEnvironment);
     }
 

@@ -3,7 +3,7 @@ package hierarchyOfAnimals;
 import java.util.Objects;
 
 public abstract class Birds extends Animals{
-    String birds = "птицы";
+    private final String birds = "птицы";
     String livingEnvironment;
     String hunting;
 
@@ -13,10 +13,14 @@ public abstract class Birds extends Animals{
         this.hunting=Objects.requireNonNullElse(hunting, "default");
     }
 
+    public String getBirds() {
+        return birds;
+    }
+
     public abstract void hunting();
 
     public static class NotFlying extends Birds {
-        String notFlying = "нелетающие";
+        private final String notFlying = "нелетающие";
         String typeOfMovement;
         String walking;
         String typeOfFood;
@@ -34,7 +38,7 @@ public abstract class Birds extends Animals{
         }
 
         public void informationAnimal() {
-            System.out.print("Имя: " + name + ", животное: " + birds + "-" + notFlying + ", возраст: " + age +
+            System.out.print("Имя: " + getName() + ", животное: " + getBirds() + "-" + notFlying + ", возраст: " + age +
                     " (год), среда проживания: " + livingEnvironment + ", \nтип передвижения: " + typeOfMovement);
         }
         @Override
@@ -94,7 +98,7 @@ public abstract class Birds extends Animals{
     }
 
     public static class Flying extends Birds {
-        String flying = "нелетающие";
+        private final String flying = "нелетающие";
         String typeOfMovement;
         String walking;
         String typeOfFood;
@@ -112,7 +116,7 @@ public abstract class Birds extends Animals{
         }
 
         public void informationAnimal() {
-            System.out.print("Имя: " + name + ", животное: " + birds + "-" + flying + ", возраст: " + age +
+            System.out.print("Имя: " + getName() + ", животное: " + getBirds() + "-" + flying + ", возраст: " + age +
                     " (год), среда проживания: " + livingEnvironment + ", \nтип передвижения: " + typeOfMovement);
         }
         @Override

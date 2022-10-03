@@ -3,7 +3,7 @@ package hierarchyOfAnimals;
 import java.util.Objects;
 
 public abstract class Animals {
-    String name;
+    private final String name;
     int age;
 
     public Animals(String name, int age) {
@@ -14,10 +14,6 @@ public abstract class Animals {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {

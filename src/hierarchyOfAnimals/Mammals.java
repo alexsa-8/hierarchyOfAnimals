@@ -3,7 +3,7 @@ package hierarchyOfAnimals;
 import java.util.Objects;
 
 public abstract class Mammals extends Animals {
-    String mammals = "млекопитающие";
+    private final String mammals = "млекопитающие";
     String livingEnvironment;
     int movementSpeed;
 
@@ -14,6 +14,10 @@ public abstract class Mammals extends Animals {
     }
 
     public abstract void walk();
+
+    public String getMammals() {
+        return mammals;
+    }
 
     public String getLivingEnvironment() {
         return livingEnvironment;
@@ -32,7 +36,7 @@ public abstract class Mammals extends Animals {
     }
 
     public static class Herbivores extends Mammals {
-        String herbivores = "травоядное";
+        private final String herbivores = "травоядное";
         String typeOfFood;
         String sleep;
         String moving;
@@ -50,7 +54,7 @@ public abstract class Mammals extends Animals {
         }
 
         public void informationAnimal() {
-            System.out.print("Имя: " + name + ", животное: " + mammals + "-" + herbivores + ", возраст: " + age +
+            System.out.print("Имя: " + getName() + ", животное: " + getMammals() + "-" + herbivores + ", возраст: " + age +
                     " (год), среда проживания: " + livingEnvironment + ", \nскорость перемещения: " + movementSpeed +
                     " км/ч, тип пищи: " + typeOfFood);
         }
@@ -113,7 +117,7 @@ public abstract class Mammals extends Animals {
         }
     }
     public static class Predators extends Mammals {
-        String predators = "хищники";
+        private final String predators = "хищники";
         String typeOfFood;
         String sleep;
         String moving;
@@ -131,7 +135,7 @@ public abstract class Mammals extends Animals {
         }
 
         public void informationAnimal() {
-            System.out.print("Имя: " + name + ", животное: " + mammals + "-" + predators + ", возраст: " + age +
+            System.out.print("Имя: " + getName() + ", животное: " + getMammals() + "-" + predators + ", возраст: " + age +
                     " (год), среда проживания: " + livingEnvironment + ", \nскорость перемещения: " + movementSpeed +
                     " км/ч, тип пищи: " + typeOfFood);
         }
